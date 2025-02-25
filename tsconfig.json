@@ -5,12 +5,16 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
-    "moduleResolution": "node",    // Це дозволяє TypeScript коректно знаходити модулі
+    "module": "esnext",
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,  // Ігнорує перевірку типів у бібліотеках
-    "noEmitOnError": false
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "noEmitOnError": false,
+    "strict": false,
+    "declaration": true,        // Увімкнути створення файлів .d.ts
+    "declarationDir": "./types"
   },
   "include": ["src/**/*"],
 }
