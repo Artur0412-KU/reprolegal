@@ -13,8 +13,7 @@
     "skipLibCheck": true,
     "noEmitOnError": false,
     "strict": false,
-    "declaration": true,        // Увімкнути створення файлів .d.ts
-    "declarationDir": "./types"
+    "declaration": true,
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "types/**/*"],
 }
