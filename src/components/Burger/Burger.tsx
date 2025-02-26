@@ -1,3 +1,4 @@
+import React from "react";
 import Close from '../../assets/icons/close.svg'
 import {useTranslation} from "react-i18next";
 import {Link} from "react-router-dom";
