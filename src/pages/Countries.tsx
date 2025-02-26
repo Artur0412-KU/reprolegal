@@ -1,5 +1,6 @@
-import Book from "../components/Book/Book.tsx";
-import CountriesSection from "../components/Countries/Countries.tsx";
+import React from "react";
+import Book from "../components/Book/Book";
+import CountriesSection from "../components/Countries/Countries";
 
 const Countries = () => {
     return (

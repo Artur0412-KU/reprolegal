@@ -1,4 +1,5 @@
-import Call from "../components/Call/Call.tsx";
+import React from "react";
+import Call from "../components/Call/Call";
 
 const Contact = () => {
     return (

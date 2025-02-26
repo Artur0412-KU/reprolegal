@@ -1,4 +1,5 @@
-import ApartContent from "../components/Apart/Apart.tsx";
+import React from "react";
+import ApartContent from "../components/Apart/Apart";
 
 const Apart = () => {
     return (

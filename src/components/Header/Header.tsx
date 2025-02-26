@@ -2,8 +2,9 @@ import {Link, NavLink} from "react-router-dom";
 import logo from "../../assets/icons/logo.png";
 import { useTranslation } from "react-i18next";
 import BurgerMenu from '../../assets/icons/burger-menu.svg'
-import Burger from "../Burger/Burger.tsx";
-import LanguageSwitcher from "../Language/LanguageSwitcher.tsx";
+import Burger from "../Burger/Burger";
+import LanguageSwitcher from "../Language/LanguageSwitcher";
+import React from "react";
 
 const Header = () => {
     const { t } = useTranslation();

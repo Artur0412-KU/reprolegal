@@ -1,7 +1,8 @@
-import Programs from "../components/Programs/Programs.tsx";
-import Service from "../components/Service/Service.tsx";
-import Consulting from "../components/Consulting/Consulting.tsx";
-import LegalService from "../components/Service/LegalService.tsx";
+import React from "react"
+import Programs from "../components/Programs/Programs";
+import Service from "../components/Service/Service";
+import Consulting from "../components/Consulting/Consulting";
+import LegalService from "../components/Service/LegalService";
 
 const Services = () => {
     return (

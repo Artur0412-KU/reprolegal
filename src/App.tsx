@@ -1,11 +1,12 @@
+import React from "react";
 import './index.css'
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Layout from "./pages/Layout.tsx";
-import Main from "./pages/Main.tsx";
-import Services from "./pages/Services.tsx";
-import Apart from "./pages/Apart.tsx";
-import Countries from "./pages/Countries.tsx";
-import Contact from "./pages/Contact.tsx";
+import Layout from "./pages/Layout";
+import Main from "./pages/Main";
+import Services from "./pages/Services";
+import Apart from "./pages/Apart";
+import Countries from "./pages/Countries";
+import Contact from "./pages/Contact";
 
 function App() {
 

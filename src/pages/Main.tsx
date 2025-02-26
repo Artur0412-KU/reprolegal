@@ -1,6 +1,7 @@
-import MainContent from "../components/Main/Main.tsx";
-import Benefits from "../components/Benefits/Benefits.tsx";
-import Testmonials from "../components/Slider/Testmonials.tsx";
+import React from "react";
+import MainContent from "../components/Main/Main";
+import Benefits from "../components/Benefits/Benefits";
+import Testmonials from "../components/Slider/Testmonials";
 
 const Main = () => {
     return (
