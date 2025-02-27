@@ -47,7 +47,7 @@ const Header = () => {
             <div className='flex items-center justify-center'>
                 <LanguageSwitcher/>
 
-                <div className="drawer hidden max-lg:flex justify-end">
+                <div className="drawer hidden max-lg:flex justify-end drawer-end">
                     <input id="my-drawer-4" type="checkbox" className="drawer-toggle"/>
                     <div className="drawer-content">
                         <label htmlFor="my-drawer-4" className='w-[24px]'>
