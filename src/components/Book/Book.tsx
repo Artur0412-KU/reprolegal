@@ -1,5 +1,6 @@
 import React from "react";
 import {useTranslation} from "react-i18next";
+import Form from "../Form/Form";
 
 const Book = () => {
     const {t} = useTranslation();
@@ -9,11 +10,13 @@ const Book = () => {
                 <div className='bg-white p-[32px] flex flex-col text-center items-center gap-[16px] rounded-[10px]'>
                     <h1 className='text-[36px] font-semibold max-lg:text-[32px]'>{t('surrogacy_title')}</h1>
                     <p className='text-[24px] max-lg:text-[18px]'>{t('surrogacy_text')}</p>
-                    <a href='mailto:support@rep-legal.com' className='bg-[#694b1a] w-[20%] py-[16px] px-[20px] text-white text-[18px] cursor-pointer hover:bg-[#fff1e0] hover:text-[#694b1a] transition rounded-[5px] max-lg:w-[70%]'>
+                    <a onClick={()=> (document.getElementById
+                ('my_modal_5') as HTMLDialogElement).showModal() } className='bg-[#694b1a] w-[20%] py-[16px] px-[20px] text-white text-[18px] cursor-pointer hover:bg-[#fff1e0] hover:text-[#694b1a] transition rounded-[5px] max-lg:w-[70%]'>
                         {t('book')}
                     </a>
                 </div>
             </div>
+            <Form/>
         </div>
     );
 };

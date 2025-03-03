@@ -1,16 +1,9 @@
-import React from "react";
-import {useForm, SubmitHandler} from "react-hook-form";
-import {useTranslation} from "react-i18next";
+import React from 'react'
+import { useTranslation } from 'react-i18next';
+import { FormValues } from '../Call/Call';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
-export type FormValues = {
-    firstName: string,
-    lastName: string,
-    email: string,
-    phone: string,
-    message: string,
-}
-
-const Call = () => {
+export default function Form() {
     const {t} = useTranslation();
     const {register, handleSubmit, formState: {errors}} = useForm<FormValues>()
     const onSubmit: SubmitHandler<FormValues> = (data) => {
@@ -21,14 +14,18 @@ const Call = () => {
 
         window.location.href = `mailto:support@rep-legal.com?subject=${subject}&body=${body}`;
     };
-    return (
-        <div className='flex items-center justify-center gap-[100px] p-[64px] max-lg:flex-col max-lg:p-[32px] max-lg:gap-[48px]'>
-            <div className='flex flex-col gap-[16px] items-end justify-start max-lg:items-center'>
-                <h1 className='font-semibold text-[64px] max-lg:text-[32px]'>{t('contactUs')}</h1>
-                <h3 className='text-[24px] max-lg:text-[18px] max-lg:text-center'>{t('discoverSolutions')}</h3>
+  return (
+    <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+        <div className="modal-box">
+            <form method="dialog">
+              <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">X</button>
+            </form>  
+            <div className='flex flex-col gap-[16px] items-start justify-start'>
+                <h1 className='font-semibold text-[32px] max-lg:text-[24px]'>{t('contactUs')}</h1>
+                <h3 className='text-[18px] max-lg:text-[16px] max-lg:text-center'>{t('discoverSolutions')}</h3>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center gap-[16px] w-1/3 max-lg:w-full'>
-                <div className='grid grid-cols-2 gap-[24px] w-full'>
+            <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center gap-[16px] w-full'>
+                <div className='grid grid-cols-2 gap-[24px] w-full mt-[24px]'>
                     <div className="flex flex-col w-full">
                         <input
                             placeholder={t('firstName')} {...register("firstName", {required: t('requiredName')})}
@@ -39,7 +36,7 @@ const Call = () => {
 
                     <div className="flex flex-col w-full">
                         <input
-                            placeholder={t('lastName')} {...register("lastName", {required: t('requiredLastName')})}
+                            placeholder={t('fastName')} {...register("lastName", {required: t('requiredLastName')})}
                             className={`p-[8px] rounded-[5px] ${errors.lastName ? 'border-red-500 border-[2px]' : ''}`}/>
                         {errors.lastName && <span className="text-red-500">{errors.lastName.message}</span>}
                     </div>
@@ -68,8 +65,8 @@ const Call = () => {
                 <input type="submit"
                        className='cursor-pointer bg-[#694b1a] p-[15px] w-full rounded-[5px] text-white transition hover:bg-[#e3c493] hover:text-[#694b1a]'/>
             </form>
+          
         </div>
-    );
-};
-
-export default Call;
+</dialog>
+  )
+}
